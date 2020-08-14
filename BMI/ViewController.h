@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *weightText;
+@property (weak, nonatomic) IBOutlet UITextField *heightText;
+
+- (IBAction)BMI:(id)sender;
 
 @end
 

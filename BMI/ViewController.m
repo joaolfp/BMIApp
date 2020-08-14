@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "BMIModel.h"
 #import "SCLAlertView.h"
 
 @interface ViewController ()
@@ -17,9 +18,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
 }
 
+- (IBAction)BMI:(id)sender {
+    [self result: _weightText.text : _heightText.text];
+}
+
+- (void) result: (NSString *)weight :(NSString *)height {
+    double weightValue = [weight doubleValue];
+    double heightValue = [height doubleValue];
+
+    BMIModel *resultBMI = [[BMIModel alloc] init];
+    
+    double result = [resultBMI resultBMI:weightValue :heightValue];
+    [self showAlert: result];
+}
+
+- (void) showAlert: (double)result {
+    NSNumber *resultValue = [NSNumber numberWithDouble:result];
+    NSString *resultText = [resultValue stringValue];
+
+    SCLAlertView *alert = [[SCLAlertView alloc] init];
+    [alert showSuccess:self title:@"BMI is" subTitle:resultText closeButtonTitle:@"OK" duration:0.0f];
+}
 
 @end

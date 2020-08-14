@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E40CB1AB285FCDDC7E68113 /* Pods_BMITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9091C2C9F8ADF8164D8DF969 /* Pods_BMITests.framework */; };
 		4B562A36D7B3D9C31C660BA3 /* Pods_BMI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1115BD1FA4A158C0CA492350 /* Pods_BMI.framework */; };
+		C5ACFFA424E60CC30080BB28 /* BMIModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5ACFFA324E60CC30080BB28 /* BMIModel.m */; };
 		C5CC7A6224E5FEC900DB64E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CC7A6124E5FEC900DB64E8 /* AppDelegate.m */; };
 		C5CC7A6524E5FEC900DB64E8 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CC7A6424E5FEC900DB64E8 /* SceneDelegate.m */; };
 		C5CC7A6824E5FEC900DB64E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CC7A6724E5FEC900DB64E8 /* ViewController.m */; };
@@ -34,6 +35,8 @@
 		13359AA33789835200909D0E /* Pods-BMITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMITests.debug.xcconfig"; path = "Target Support Files/Pods-BMITests/Pods-BMITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3AB1D93868EF43F02F16390A /* Pods-BMI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMI.debug.xcconfig"; path = "Target Support Files/Pods-BMI/Pods-BMI.debug.xcconfig"; sourceTree = "<group>"; };
 		9091C2C9F8ADF8164D8DF969 /* Pods_BMITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BMITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5ACFFA324E60CC30080BB28 /* BMIModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMIModel.m; sourceTree = "<group>"; };
+		C5ACFFA624E60DC30080BB28 /* BMIModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMIModel.h; sourceTree = "<group>"; };
 		C5CC7A5D24E5FEC900DB64E8 /* BMI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5CC7A6024E5FEC900DB64E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5CC7A6124E5FEC900DB64E8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -119,6 +122,8 @@
 				C5CC7A6E24E5FECF00DB64E8 /* LaunchScreen.storyboard */,
 				C5CC7A7124E5FECF00DB64E8 /* Info.plist */,
 				C5CC7A7224E5FECF00DB64E8 /* main.m */,
+				C5ACFFA324E60CC30080BB28 /* BMIModel.m */,
+				C5ACFFA624E60DC30080BB28 /* BMIModel.h */,
 			);
 			path = BMI;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 			files = (
 				C5CC7A6824E5FEC900DB64E8 /* ViewController.m in Sources */,
 				C5CC7A6224E5FEC900DB64E8 /* AppDelegate.m in Sources */,
+				C5ACFFA424E60CC30080BB28 /* BMIModel.m in Sources */,
 				C5CC7A7324E5FECF00DB64E8 /* main.m in Sources */,
 				C5CC7A6524E5FEC900DB64E8 /* SceneDelegate.m in Sources */,
 			);
@@ -470,10 +476,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = BMI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -491,10 +493,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = BMI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
