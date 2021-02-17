@@ -30,8 +30,12 @@
 
     BMIModel *resultBMI = [[BMIModel alloc] init];
     
-    double result = [resultBMI resultBMI:weightValue :heightValue];
-    [self showAlert: result];
+    if ([weight isEqualToString: @""] && [height isEqualToString: @""]) {
+        [self showWarningAlert];
+    } else {
+        double result = [resultBMI resultBMI:weightValue :heightValue];
+        [self showAlert: result];
+    }
 }
 
 - (void) showAlert: (double)result {
@@ -40,6 +44,11 @@
 
     SCLAlertView *alert = [[SCLAlertView alloc] init];
     [alert showSuccess:self title:@"BMI is" subTitle:resultText closeButtonTitle:@"OK" duration:0.0f];
+}
+
+- (void) showWarningAlert {
+    SCLAlertView *alert = [[SCLAlertView alloc] init];
+    [alert showWarning:self title:@"Warning" subTitle:@"Please fill in all fields" closeButtonTitle:@"OK" duration:0.0f];
 }
 
 @end
