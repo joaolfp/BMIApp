@@ -1,5 +1,5 @@
 PODS:
-  - SCLAlertView-Objective-C (1.1.6)
+  - SCLAlertView-Objective-C (1.2.0)
 
 DEPENDENCIES:
   - SCLAlertView-Objective-C
@@ -9,8 +9,8 @@ SPEC REPOS:
     - SCLAlertView-Objective-C
 
 SPEC CHECKSUMS:
-  SCLAlertView-Objective-C: 2bb9be204bffaf24762a0e33fe6ca9645819b3b7
+  SCLAlertView-Objective-C: 84f12f66d779dadad7f293e5e8b7697ba4254ee0
 
 PODFILE CHECKSUM: 72a25ce009f49f8b1a724629c2be3605eac6a7bc
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.0
