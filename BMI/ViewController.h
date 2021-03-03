@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BMIView.h"
 
 @interface ViewController : UIViewController
 
-@property UIImageView *imageView;
-@property UITextField *weightField;
-@property UITextField *heightField;
-@property UIButton *buttonLogin;
+@property BMIView *bmiView;
 
 @end
 
