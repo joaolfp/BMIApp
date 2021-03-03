@@ -10,10 +10,10 @@
 
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UITextField *weightText;
-@property (weak, nonatomic) IBOutlet UITextField *heightText;
-
-- (IBAction)BMI:(id)sender;
+@property UIImageView *imageView;
+@property UITextField *weightField;
+@property UITextField *heightField;
+@property UIButton *buttonLogin;
 
 @end
 
