@@ -18,10 +18,66 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self setupView];
+    [self setupComponents];
 }
 
-- (IBAction)BMI:(id)sender {
-    [self result: _weightText.text : _heightText.text];
+- (void) setupView {
+    self.view.backgroundColor = [UIColor whiteColor];
+}
+
+- (void) setupComponents {
+    self.imageView = [[UIImageView alloc] init];
+    self.imageView.translatesAutoresizingMaskIntoConstraints = FALSE;
+    self.imageView.image = [UIImage imageNamed:@"logo"];
+    [self.view addSubview: self.imageView];
+    
+    [self.imageView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor constant:30].active = YES;
+    [self.imageView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+    [self.imageView.widthAnchor constraintEqualToConstant:200].active = YES;
+    [self.imageView.heightAnchor constraintEqualToConstant:150].active = YES;
+    
+    self.weightField = [[UITextField alloc] init];
+    self.weightField.translatesAutoresizingMaskIntoConstraints = FALSE;
+    self.weightField.placeholder = @"Digite o seu peso";
+    self.weightField.layer.borderWidth = 1;
+    self.weightField.layer.borderColor = [UIColor grayColor].CGColor;
+    [self.view addSubview:self.weightField];
+    
+    [self.weightField.topAnchor constraintEqualToAnchor:self.imageView.bottomAnchor constant:16].active = YES;
+    [self.weightField.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:40].active = YES;
+    [self.weightField.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-40].active = YES;
+    [self.weightField.heightAnchor constraintEqualToConstant:40].active = YES;
+    
+    self.heightField = [[UITextField alloc] init];
+    self.heightField.translatesAutoresizingMaskIntoConstraints = FALSE;
+    self.heightField.placeholder = @"Digite o sua altura";
+    self.heightField.layer.borderWidth = 1;
+    self.heightField.layer.borderColor = [UIColor grayColor].CGColor;
+    [self.view addSubview:self.heightField];
+    
+    [self.heightField.topAnchor constraintEqualToAnchor:self.weightField.bottomAnchor constant:8].active = YES;
+    [self.heightField.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:40].active = YES;
+    [self.heightField.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-40].active = YES;
+    [self.heightField.heightAnchor constraintEqualToConstant:40].active = YES;
+    
+    self.buttonLogin = [[UIButton alloc] init];
+    self.buttonLogin.translatesAutoresizingMaskIntoConstraints = FALSE;
+    self.buttonLogin.backgroundColor = [UIColor blackColor];
+    [self.buttonLogin setTitle:@"Calcular IMC" forState:UIControlStateNormal];
+    [self.buttonLogin setTintColor:[UIColor whiteColor]];
+    [self.buttonLogin addTarget:self action:@selector(imcTap) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.buttonLogin];
+    
+    [self.buttonLogin.topAnchor constraintEqualToAnchor:self.heightField.bottomAnchor constant:20].active = YES;
+    [self.buttonLogin.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:40].active = YES;
+    [self.buttonLogin.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-40].active = YES;
+    [self.buttonLogin.heightAnchor constraintEqualToConstant:50].active = YES;
+}
+
+- (void) imcTap {
+    [self result:self.weightField.text :self.heightField.text];
 }
 
 - (void) result: (NSString *)weight :(NSString *)height {
