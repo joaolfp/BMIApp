@@ -8,7 +8,7 @@ A simple iOS app for calculating BMI (Body Mass Index) written in Objective-C
 - <b>Language:</b> Swift 5
 - <b>Dependencies:</b> Cocoapods
 - <b>Architecture:</b> MVC
-- <b>Layout:</b> Storyboard
+- <b>Layout:</b> View Code
 - <b>Unit Test:</b> XCTest
 - <b>CI:</b> Workflows Github
 
