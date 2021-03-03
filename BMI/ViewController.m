@@ -40,9 +40,10 @@
     
     self.weightField = [[UITextField alloc] init];
     self.weightField.translatesAutoresizingMaskIntoConstraints = FALSE;
-    self.weightField.placeholder = @"Digite o seu peso";
+    self.weightField.placeholder = @"Enter your weight";
     self.weightField.layer.borderWidth = 1;
     self.weightField.layer.borderColor = [UIColor grayColor].CGColor;
+    self.weightField.borderStyle = UITextBorderStyleRoundedRect;
     [self.view addSubview:self.weightField];
     
     [self.weightField.topAnchor constraintEqualToAnchor:self.imageView.bottomAnchor constant:16].active = YES;
@@ -52,9 +53,10 @@
     
     self.heightField = [[UITextField alloc] init];
     self.heightField.translatesAutoresizingMaskIntoConstraints = FALSE;
-    self.heightField.placeholder = @"Digite o sua altura";
+    self.heightField.placeholder = @"Enter your height";
     self.heightField.layer.borderWidth = 1;
     self.heightField.layer.borderColor = [UIColor grayColor].CGColor;
+    self.heightField.borderStyle = UITextBorderStyleRoundedRect;
     [self.view addSubview:self.heightField];
     
     [self.heightField.topAnchor constraintEqualToAnchor:self.weightField.bottomAnchor constant:8].active = YES;
@@ -65,7 +67,7 @@
     self.buttonLogin = [[UIButton alloc] init];
     self.buttonLogin.translatesAutoresizingMaskIntoConstraints = FALSE;
     self.buttonLogin.backgroundColor = [UIColor blackColor];
-    [self.buttonLogin setTitle:@"Calcular IMC" forState:UIControlStateNormal];
+    [self.buttonLogin setTitle:@"CALCULATE BMI" forState:UIControlStateNormal];
     [self.buttonLogin setTintColor:[UIColor whiteColor]];
     [self.buttonLogin addTarget:self action:@selector(imcTap) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.buttonLogin];
@@ -86,7 +88,7 @@
 
     BMIModel *resultBMI = [[BMIModel alloc] init];
     
-    if ([weight isEqualToString: @""] && [height isEqualToString: @""]) {
+    if ([weight isEqualToString: @""] || [height isEqualToString: @""]) {
         [self showWarningAlert];
     } else {
         double result = [resultBMI resultBMI:weightValue :heightValue];
