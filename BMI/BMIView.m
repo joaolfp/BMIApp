@@ -8,6 +8,10 @@
 
 #import "BMIView.h"
 
+@interface BMIView ()
+
+@end
+
 @implementation BMIView
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -50,7 +54,7 @@
 }
 
 - (void)buildViewHierarchy {
-    [self addSubview: self.imageView];
+    [self addSubview:self.imageView];
     [self addSubview:self.weightField];
     [self addSubview:self.heightField];
     [self addSubview:self.buttonLogin];

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3E40CB1AB285FCDDC7E68113 /* Pods_BMITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9091C2C9F8ADF8164D8DF969 /* Pods_BMITests.framework */; };
 		4B562A36D7B3D9C31C660BA3 /* Pods_BMI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1115BD1FA4A158C0CA492350 /* Pods_BMI.framework */; };
+		A6A889B425F164C7009BCE0D /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A889B325F164C7009BCE0D /* ResultViewController.m */; };
+		A6A889B925F16B09009BCE0D /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A889B825F16B09009BCE0D /* ResultView.m */; };
 		A6F6A12325F0024D00E7D0BF /* BMIView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F6A12225F0024D00E7D0BF /* BMIView.m */; };
 		C5ACFFA424E60CC30080BB28 /* BMIModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5ACFFA324E60CC30080BB28 /* BMIModel.m */; };
 		C5CC7A6224E5FEC900DB64E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CC7A6124E5FEC900DB64E8 /* AppDelegate.m */; };
@@ -35,6 +37,10 @@
 		13359AA33789835200909D0E /* Pods-BMITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMITests.debug.xcconfig"; path = "Target Support Files/Pods-BMITests/Pods-BMITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3AB1D93868EF43F02F16390A /* Pods-BMI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMI.debug.xcconfig"; path = "Target Support Files/Pods-BMI/Pods-BMI.debug.xcconfig"; sourceTree = "<group>"; };
 		9091C2C9F8ADF8164D8DF969 /* Pods_BMITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BMITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6A889B225F164C7009BCE0D /* ResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		A6A889B325F164C7009BCE0D /* ResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		A6A889B725F16B09009BCE0D /* ResultView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultView.h; sourceTree = "<group>"; };
+		A6A889B825F16B09009BCE0D /* ResultView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultView.m; sourceTree = "<group>"; };
 		A6F6A12125F0024D00E7D0BF /* BMIView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMIView.h; sourceTree = "<group>"; };
 		A6F6A12225F0024D00E7D0BF /* BMIView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMIView.m; sourceTree = "<group>"; };
 		C5ACFFA324E60CC30080BB28 /* BMIModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMIModel.m; sourceTree = "<group>"; };
@@ -126,6 +132,10 @@
 				C5ACFFA624E60DC30080BB28 /* BMIModel.h */,
 				A6F6A12125F0024D00E7D0BF /* BMIView.h */,
 				A6F6A12225F0024D00E7D0BF /* BMIView.m */,
+				A6A889B225F164C7009BCE0D /* ResultViewController.h */,
+				A6A889B325F164C7009BCE0D /* ResultViewController.m */,
+				A6A889B725F16B09009BCE0D /* ResultView.h */,
+				A6A889B825F16B09009BCE0D /* ResultView.m */,
 			);
 			path = BMI;
 			sourceTree = "<group>";
@@ -316,6 +326,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5CC7A6824E5FEC900DB64E8 /* ViewController.m in Sources */,
+				A6A889B925F16B09009BCE0D /* ResultView.m in Sources */,
+				A6A889B425F164C7009BCE0D /* ResultViewController.m in Sources */,
 				A6F6A12325F0024D00E7D0BF /* BMIView.m in Sources */,
 				C5CC7A6224E5FEC900DB64E8 /* AppDelegate.m in Sources */,
 				C5ACFFA424E60CC30080BB28 /* BMIModel.m in Sources */,

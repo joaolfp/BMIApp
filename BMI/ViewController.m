@@ -9,8 +9,11 @@
 #import "ViewController.h"
 #import "BMIModel.h"
 #import "SCLAlertView.h"
+#import "ResultViewController.h"
 
 @interface ViewController ()
+
+@property BMIView *bmiView;
 
 @end
 
@@ -30,6 +33,10 @@
 
 - (void) setupView {
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.navigationItem.title = @"BMI";
+    self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
 }
 
 - (void) setupComponents {
@@ -50,16 +57,12 @@
         [self showWarningAlert];
     } else {
         double result = [resultBMI resultBMI:weightValue :heightValue];
-        [self showAlert: result];
+        NSNumber *resultValue = [NSNumber numberWithDouble:result];
+        
+        ResultViewController *resultViewController = [[ResultViewController alloc] init];
+        resultViewController.resultBMI = [resultValue stringValue];
+        [self.navigationController pushViewController:resultViewController animated:TRUE];
     }
-}
-
-- (void) showAlert: (double)result {
-    NSNumber *resultValue = [NSNumber numberWithDouble:result];
-    NSString *resultText = [resultValue stringValue];
-
-    SCLAlertView *alert = [[SCLAlertView alloc] init];
-    [alert showSuccess:self title:@"BMI is" subTitle:resultText closeButtonTitle:@"OK" duration:0.0f];
 }
 
 - (void) showWarningAlert {
