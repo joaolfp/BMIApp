@@ -33,10 +33,10 @@
 }
 
 - (void) setupComponents {
-    [self.bmiView.buttonLogin addTarget:self action:@selector(imcTap) forControlEvents:UIControlEventTouchUpInside];
+    [self.bmiView.buttonLogin addTarget:self action:@selector(bmiTap) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void) imcTap {
+- (void) bmiTap {
     [self result:self.bmiView.weightField.text :self.bmiView.heightField.text];
 }
 
