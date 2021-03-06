@@ -31,7 +31,7 @@
     [self setupComponents];
 }
 
-- (void) setupView {
+- (void)setupView {
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.navigationItem.title = @"BMI";
@@ -39,15 +39,15 @@
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
 }
 
-- (void) setupComponents {
+- (void)setupComponents {
     [self.bmiView.buttonLogin addTarget:self action:@selector(bmiTap) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void) bmiTap {
+- (void)bmiTap {
     [self result:self.bmiView.weightField.text :self.bmiView.heightField.text];
 }
 
-- (void) result: (NSString *)weight :(NSString *)height {
+- (void)result: (NSString *)weight :(NSString *)height {
     double weightValue = [weight doubleValue];
     double heightValue = [height doubleValue];
 
@@ -65,7 +65,7 @@
     }
 }
 
-- (void) showWarningAlert {
+- (void)showWarningAlert {
     SCLAlertView *alert = [[SCLAlertView alloc] init];
     [alert showWarning:self title:@"Warning" subTitle:@"Please fill in all fields" closeButtonTitle:@"OK" duration:0.0f];
 }

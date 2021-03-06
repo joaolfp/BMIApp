@@ -2,7 +2,7 @@
 //  ResultViewController.h
 //  BMI
 //
-//  Created by joao.lucas.f.pereira on 04/03/21.
+//  Created by Joao Lucas on 04/03/21.
 //  Copyright © 2021 Joao Lucas. All rights reserved.
 //
 

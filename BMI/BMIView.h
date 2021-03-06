@@ -12,10 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BMIView : UIView
 
-@property UIImageView *imageView;
-@property UITextField *weightField;
-@property UITextField *heightField;
-@property UIButton *buttonLogin;
+@property (strong, nonatomic) UIImageView *imageView;
+@property (strong, nonatomic) UITextField *weightField;
+@property (strong, nonatomic) UITextField *heightField;
+@property (strong, nonatomic) UIButton *buttonLogin;
 
 @end
 
