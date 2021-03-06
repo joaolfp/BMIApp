@@ -13,7 +13,7 @@
 
 @interface ViewController ()
 
-@property BMIView *bmiView;
+@property (strong, nonatomic) BMIView *bmiView;
 
 @end
 

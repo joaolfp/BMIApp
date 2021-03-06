@@ -10,6 +10,8 @@
 
 @interface ResultView ()
 
+@property (strong, nonatomic) UIView *contentResult;
+
 @end
 
 @implementation ResultView

@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ResultViewController : UIViewController
 
-@property NSString *resultBMI;
+@property (strong, nonatomic) NSString *resultBMI;
 
 @end
 

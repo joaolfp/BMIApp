@@ -12,7 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ResultView : UIView
 
-@property (strong, nonatomic) UIView *contentResult;
 @property (strong, nonatomic) UILabel *resultLabel;
 @property (strong, nonatomic) UIImageView *photo;
 
