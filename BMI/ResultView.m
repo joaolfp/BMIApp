@@ -61,8 +61,8 @@
     
     [self.photo.topAnchor constraintEqualToAnchor:self.contentResult.bottomAnchor constant:50].active = YES;
     [self.photo.centerXAnchor constraintEqualToAnchor:self.centerXAnchor].active = YES;
-    [self.photo.bottomAnchor constraintEqualToAnchor:self.bottomAnchor constant:-50].active = YES;
-    [self.photo.widthAnchor constraintEqualToConstant:250].active = YES;
+    [self.photo.widthAnchor constraintEqualToConstant:200].active = YES;
+    [self.photo.heightAnchor constraintEqualToConstant:230].active = YES;
 }
 
 @end
